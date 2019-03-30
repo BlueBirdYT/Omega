@@ -1385,7 +1385,7 @@ async def on_message(message):
         msg2 = await client.send_message(message.channel, msg)
   
 @client.command(pass_context = True)
-@commands.check(is_owner
+@commands.check(is_owner)
 async def devrole(ctx, user: discord.Member, *, role: discord.Role = None):
     if user is None or role is None:
         return await client.say("Invalid args, proper way is o! @user (rolename)")
