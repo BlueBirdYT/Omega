@@ -1381,8 +1381,10 @@ async def gifsearch(ctx, *keywords):
 async def on_message(message):
     await client.process_commands(message)
     if '<@561103343074803712>' in message.content:
-        msg = 'Hello, my prefix is ``o!``, Use ``n!help`` for more information!**'.format(user.name,message)
+        msg = 'Hello, my prefix is ``o!``, Use ``n!help`` for more information!**'.format(message)
         msg2 = await client.send_message(message.channel, msg)
+    if message.server.id == '560282938499923978':
+        return    
     if 'fuck' in message.content:
         msg = 'Do not use bad words {0.author.name}'.format(message)
         msg2 = await client.send_message(message.channel, msg)
