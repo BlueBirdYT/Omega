@@ -1381,7 +1381,7 @@ async def gifsearch(ctx, *keywords):
 async def on_message(message):
     await client.process_commands(message)
     if '<@561103343074803712>' in message.content:
-        msg = 'Hello, my prefix is ``o!``, Use ``n!help`` for more information!**'.format(message)
+        msg = 'Hello, my prefix is ``o!``, Use ``o!help`` for more information!**'.format(message)
         msg2 = await client.send_message(message.channel, msg)
   
 @client.command(pass_context = True)
